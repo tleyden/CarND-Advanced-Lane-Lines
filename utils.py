@@ -26,7 +26,6 @@ def show_images(images, cols=1, scale_factor=1.0, cv2ConvertTarget=None, titles=
     fig = plt.figure()
     for n, (image, title) in enumerate(zip(images, titles)):
         a = fig.add_subplot(cols, np.ceil(n_images / float(cols)), n + 1)
-        print("num dimensions: {}".format(image.ndim))
         if image.ndim == 2:
             plt.gray()
             plt.imshow(image, cmap='gray')
